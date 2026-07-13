@@ -46,6 +46,49 @@ export const renderAppSection = () => `
             <span>Workouts, meal logging, reminders, and coach notes.</span>
           </div>
         </div>
+        <form class="routine-setter" data-routine-form>
+          <div class="routine-setter-heading">
+            <span>Routine setter</span>
+            <strong>Set Routine</strong>
+          </div>
+          <label class="routine-field">
+            <span>Routine text</span>
+            <input name="text" type="text" value="Drink Water" maxlength="72" required />
+          </label>
+          <div class="routine-field-row">
+            <label class="routine-field">
+              <span>Duration</span>
+              <select name="duration">
+                <option value="30 Secs">30 Secs</option>
+                <option value="1 Min" selected>1 Min</option>
+                <option value="10 Mins">10 Mins</option>
+                <option value="15 Mins">15 Mins</option>
+                <option value="1 Hr">1 Hr</option>
+              </select>
+            </label>
+            <label class="routine-field">
+              <span>Preset</span>
+              <select name="preset">
+                <option value="water">Water</option>
+                <option value="standup">Standup</option>
+                <option value="stretch">Stretch</option>
+              </select>
+            </label>
+          </div>
+          <fieldset class="routine-trigger-group">
+            <legend>Notify</legend>
+            <label>
+              <input type="radio" name="trigger" value="start" checked />
+              <span>At start</span>
+            </label>
+            <label>
+              <input type="radio" name="trigger" value="end" />
+              <span>At end</span>
+            </label>
+          </fieldset>
+          <button class="button button-primary" type="submit">Set Routine</button>
+          <p class="routine-status" data-routine-status role="status">Routine notifications are ready.</p>
+        </form>
       </div>
     </div>
   </section>

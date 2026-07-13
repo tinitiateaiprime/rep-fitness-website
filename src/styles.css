@@ -2335,3 +2335,102 @@ details p {
 
 
 
+.routine-setter {
+  display: grid;
+  max-width: 560px;
+  gap: 16px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.routine-setter-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.routine-setter-heading span,
+.routine-field span,
+.routine-trigger-group legend {
+  color: var(--forest);
+  font-size: 0.78rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.routine-setter-heading strong {
+  color: var(--ink);
+  font-size: 1.28rem;
+  line-height: 1.15;
+}
+
+.routine-field,
+.routine-trigger-group {
+  display: grid;
+  gap: 8px;
+}
+
+.routine-field input,
+.routine-field select {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 13px;
+  color: var(--ink);
+  background: #f8faf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 800;
+}
+
+.routine-field-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.routine-trigger-group {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.routine-trigger-group legend {
+  grid-column: 1 / -1;
+}
+
+.routine-trigger-group label {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 9px;
+  padding: 0 12px;
+  background: #f4f7ef;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-weight: 900;
+}
+
+.routine-trigger-group input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--coral);
+}
+
+.routine-status {
+  min-height: 24px;
+  margin: 0;
+  font-weight: 800;
+}
+
+@media (max-width: 640px) {
+  .routine-field-row,
+  .routine-trigger-group {
+    grid-template-columns: 1fr;
+  }
+}
